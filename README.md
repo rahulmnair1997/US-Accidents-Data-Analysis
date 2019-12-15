@@ -3,7 +3,7 @@ A basic analysis of a dataset consisting of the road accidents happened in US fr
 It consists of about 2.25 million records.
 
 ## Columns:-
-ID This is a unique identifier of the accident record.
+ID This is a unique identifier of the accident record. \n
 Source Indicates source of the accident report (i.e. the API which reported the accident.).
 TMC A traffic accident may have a Traffic Message Channel (TMC) code which provides more detailed description of the event.
 Severity Shows the severity of the accident, a number between 1 and 4, where 1 indicates the least impact on traffic (i.e., short delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e., long delay).
