@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+<head>
+  <meta charset="UTF-8">
+  <title>Accident Severity Predictor</title>
+ <!--  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+  
+</head>
+
+<body style="background: lightblue;">
+ <div class="login" ng-app="">
+	<h1>Severity Predictor</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Distance(mi)" placeholder="Distance(mi)" required="required" />
+		  <input type="text" name="Temperature(F)" placeholder="Temperature(F)" required="required" />
+      <input type="text" name="Humidity(%)" placeholder="Humidity(%)" required="required" />
+      <input type="text" name="Pressure(in)" placeholder="Pressure(in)" required="required" />
+      <input type="text" name="Visibility(mi)" placeholder="Visibility(mi)" required="required" />
+      <input type="text" name="Wind_Speed(mph)" placeholder="Wind_Speed(mph)" required="required" />
+      <input type="text" name="Duration" placeholder="Duration" required="required" />
+      <input type="text" name="Visibility(mi))" placeholder="Visibility(mi))" required="required" />
+      <input type="text" name="Amenity" placeholder="Amenity" required="required" />
+      <input type="text" name="Crossing" placeholder="Crossing" required="required" />
+      <input type="text" name="Junction" placeholder="Junction" required="required" />
+      <input type="text" name="Railway" placeholder="Railway" required="required" />
+      <input type="text" name="Station" placeholder="Station" required="required" />
+      <input type="text" name="Stop" placeholder="Stop" required="required" />
+      <input type="text" name="Traffic_Signal" placeholder="Traffic_Signal" required="required" />
+      <input type="text" name="month" placeholder="month" required="required" />
+      <input type="text" name="Side" placeholder="Side" required="required" />
+      <input type="text" name="State" placeholder="State" required="required" />
+      <input type="text" name="Sunrise_Sunset" placeholder="Sunrise_Sunset" required="required" />
+      <input type="text" name="Timezone" placeholder="Timezone" required="required" />
+      <input type="text" name="Weather_Condition" placeholder="Weather_Condition" required="required" />
+      <input type="text" name="Wind_Direction" placeholder="Wind_Direction" required="required" />
+      <input type="text" name="Zipcode" placeholder="Zipcode" required="required" />
+      <input type="text" name="Airport_Code" placeholder="Airport_Code" required="required" />
+      <input type="text" name="City" placeholder="City" required="required" />
+      <input type="text" name="County" placeholder="County" required="required" />
+      <input type="text" name="Street" placeholder="Street" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict the severity</button>
+    </form>
+
+   <br>
+   <br>
+   {{ (prediction_text) }}
+
+ </div>
+</body>
+</html>
